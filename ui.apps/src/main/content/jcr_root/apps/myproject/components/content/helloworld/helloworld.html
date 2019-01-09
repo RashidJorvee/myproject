@@ -1,0 +1,14 @@
+<p data-sly-test="${properties.text}">Text property: ${properties.text}</p>
+
+<pre data-sly-use.hello="com.aem.community.core.models.HelloWorldModel">
+HelloWorldModel says:
+${hello.message}
+</pre>
+<div><ul data-sly-list="${hello.employeeList}">
+	 <p><b>Name:</b> ${item.userName @context='styleToken'}</p>
+		<p><b>Gender:</b> ${item.gender @context='styleToken'}</p>
+		<p><b>User Profile:</b> ${item.profileImagePath @context='styleToken'}</p>
+
+    </li>
+  </ul>
+</div>

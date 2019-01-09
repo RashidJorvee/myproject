@@ -1,0 +1,99 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jcr:root xmlns:sling="http://sling.apache.org/jcr/sling/1.0" xmlns:cq="http://www.day.com/jcr/cq/1.0" xmlns:jcr="http://www.jcp.org/jcr/1.0" xmlns:nt="http://www.jcp.org/jcr/nt/1.0"
+    jcr:primaryType="nt:unstructured"
+    jcr:title="Properties"
+    sling:resourceType="cq/gui/components/authoring/dialog">
+    <content
+        jcr:primaryType="nt:unstructured"
+        sling:resourceType="granite/ui/components/foundation/container">
+        <layout
+            jcr:primaryType="nt:unstructured"
+            sling:resourceType="granite/ui/components/foundation/layouts/fixedcolumns"/>
+        <items jcr:primaryType="nt:unstructured">
+            <column
+                jcr:primaryType="nt:unstructured"
+                sling:resourceType="granite/ui/components/foundation/container">
+                <items jcr:primaryType="nt:unstructured">
+                    <text
+                        jcr:primaryType="nt:unstructured"
+                        sling:resourceType="granite/ui/components/foundation/form/textfield"
+                        fieldLabel="Text"
+                        name="./text"/>
+                    <employee
+                        jcr:primaryType="nt:unstructured"
+                        sling:resourceType="granite/ui/components/coral/foundation/form/multifield"
+                        composite="{Boolean}true"
+                        eaem-show-on-collapse="EAEM.showProductName"
+                        fieldLabel="Employee details">
+                        <field
+                            jcr:primaryType="nt:unstructured"
+                            sling:resourceType="granite/ui/components/coral/foundation/container"
+                            name="./employee">
+                            <items jcr:primaryType="nt:unstructured">
+                                <column
+                                    jcr:primaryType="nt:unstructured"
+                                    sling:resourceType="granite/ui/components/coral/foundation/container">
+                                    <items jcr:primaryType="nt:unstructured">
+                                        <name
+                                            jcr:primaryType="nt:unstructured"
+                                            sling:resourceType="granite/ui/components/foundation/form/textfield"
+                                            fieldLabel="Name"
+                                            name="./userName"/>
+                                        <gender
+                                            jcr:primaryType="nt:unstructured"
+                                            sling:resourceType="granite/ui/components/foundation/form/select"
+                                            fieldLabel="Gender"
+                                            name="./gender">
+                                            <items jcr:primaryType="nt:unstructured">
+                                                <male
+                                                    jcr:primaryType="nt:unstructured"
+                                                    text="Male"
+                                                    value="male"/>
+                                                <female
+                                                    jcr:primaryType="nt:unstructured"
+                                                    text="Female"
+                                                    value="female"/>
+                                                <select
+                                                    jcr:primaryType="nt:unstructured"
+                                                    text="select"/>
+                                            </items>
+                                        </gender>
+                                        <profilepic
+                                            jcr:primaryType="nt:unstructured"
+                                            sling:resourceType="commerce/gui/components/common/assetpicker"
+                                            fieldLabel="User profile"
+                                            name=""
+                                            rootPath="/content/dam"/>
+                                        <image
+                                            jcr:primaryType="nt:unstructured"
+                                            jcr:title="heroV2.image"
+                                            sling:resourceType="granite/ui/components/foundation/container"
+                                            id="image">
+                                            <layout
+                                                jcr:primaryType="nt:unstructured"
+                                                sling:resourceType="granite/ui/components/foundation/layouts/fixedcolumns"/>
+                                            <items jcr:primaryType="nt:unstructured">
+                                                <columns
+                                                    jcr:primaryType="nt:unstructured"
+                                                    sling:resourceType="granite/ui/components/foundation/container">
+                                                    <items jcr:primaryType="nt:unstructured">
+                                                        <heroImage
+                                                            jcr:primaryType="nt:unstructured"
+                                                            sling:resourceType="commerce/gui/components/common/assetpicker"
+                                                            fieldLabel="Image"
+                                                            name="./profileImagePath"
+                                                            rootPath="/content/dam"/>
+                                                    </items>
+                                                </columns>
+                                            </items>
+                                        </image>
+                                    </items>
+                                </column>
+                            </items>
+                        </field>
+                    </employee>
+                </items>
+            </column>
+        </items>
+    </content>
+</jcr:root>

@@ -1,0 +1,13 @@
+<div data-sly-use.employeeInfo="com.aem.community.core.models.EmployeeDetails">
+Please configure employees.
+	<div><ul data-sly-list="${employeeInfo.employeeList}">
+		<div style="border: black;border-style: double;">
+        <p><b>Name:</b> ${item.userName @context='styleToken'}</p>
+		<p><b>Gender:</b> ${item.gender @context='styleToken'}</p>
+		<p><b>User Profile:</b> ${item.profileImagePath @context='styleToken'}</p>
+		</div>
+    </li>
+  </ul>
+</div>
+
+</div>

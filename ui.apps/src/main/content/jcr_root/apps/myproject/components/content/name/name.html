@@ -1,0 +1,15 @@
+<sly data-sly-test.hasName="${properties.name}">Text property: ${properties.name}
+<br />
+<pre data-sly-use.helloworld="com.aem.community.core.models.HelloWorldModel">
+${helloworld.message}
+<pre data-sly-use.name="com.aem.community.core.models.NameProperty">
+${name.message}
+NameProperty says: ${name.formettedName}
+
+</pre>
+</sly>
+
+<sly data-sly-test="${!hasName}">
+
+<p>Please configure your name.</p>
+</sly>
